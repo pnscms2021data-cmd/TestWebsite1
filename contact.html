@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Custom Inquiries | Knot & Nest by JP</title>
+  <meta name="description" content="Get in touch with artisan JP at Knot & Nest. Inquire about custom orders, bridal shower favors, bulk crochet commissions, or order tracking.">
+  <meta name="keywords" content="contact Knot and Nest by JP, crochet commission inquiry, handmade crochet contact India, WhatsApp crochet ordering">
+  <meta name="theme-color" content="#FAF7F2">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar" role="region" aria-label="Announcement">
+    <span>✨ Handcrafted with love in India • <strong>Free Pan-India Delivery</strong> on orders over ₹1,500 • Custom Orders Welcome</span>
+  </div>
+
+  <!-- Main Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="Knot and Nest by JP Home">
+        <span class="logo-main">Knot <span>&</span> Nest</span>
+        <span class="logo-sub">by JP • Handmade</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="order.html" class="nav-link">Order</a>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="header-actions">
+        <a href="order.html" class="btn btn-primary btn-sm">Place Order</a>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div>
+      <div class="mobile-nav-header">
+        <div class="brand-logo">
+          <span class="logo-main" style="font-size: 1.4rem;">Knot <span>&</span> Nest</span>
+          <span class="logo-sub">by JP</span>
+        </div>
+        <button class="mobile-nav-close" aria-label="Close menu" style="font-size: 1.6rem; color: var(--color-text-primary);">&times;</button>
+      </div>
+
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="order.html" class="nav-link">Order</a>
+      </nav>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <a href="products.html" class="btn btn-primary" style="width: 100%;">Explore Collection</a>
+      <a href="order.html?custom=true" class="btn btn-outline" style="width: 100%;">Order Custom Crochet</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Contact Header Hero -->
+    <section class="section-padding" style="background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%); text-align: center; padding-bottom: 40px;">
+      <div class="container-narrow">
+        <span class="eyebrow">Get In Touch</span>
+        <h1 style="margin-bottom: 16px;">Let's Create Something Special</h1>
+        <p class="text-lead">
+          Have a question about a design, want a customized color combination, or wish to order in bulk for festive occasions? We would love to hear from you.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Grid Section -->
+    <section class="section-padding" style="padding-top: 20px;">
+      <div class="container">
+        <div class="form-grid-layout">
+          
+          <!-- Left: Contact Form -->
+          <div class="form-card">
+            <h2 style="font-size: 1.6rem; margin-bottom: 12px;">Send Us a Message</h2>
+            <p style="font-size: 0.92rem; color: var(--color-text-secondary); margin-bottom: 24px;">
+              Fill in your inquiry and artisan JP will respond directly within 24 hours.
+            </p>
+
+            <form id="contactForm">
+              <div class="form-group">
+                <label class="form-label" for="contactName">Your Name <span class="required-star">*</span></label>
+                <input type="text" id="contactName" class="form-control" placeholder="e.g. Radhika Sen" required>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label class="form-label" for="contactEmail">Email Address <span class="required-star">*</span></label>
+                  <input type="email" id="contactEmail" class="form-control" placeholder="e.g. radhika@example.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="contactPhone">Phone / WhatsApp Number</label>
+                  <input type="tel" id="contactPhone" class="form-control" placeholder="e.g. +91 98765 43210">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactMessage">Message / Custom Query <span class="required-star">*</span></label>
+                <textarea id="contactMessage" class="form-control" placeholder="Tell us about the crochet piece, color ideas, event dates, or any questions..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 10px;">
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <!-- Right: Direct Channels & Studio Details -->
+          <div>
+            
+            <div style="background-color: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: var(--radius-md); padding: 32px; margin-bottom: 28px;">
+              <h3 style="font-size: 1.35rem; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--color-border);">
+                Direct Studio Channels
+              </h3>
+
+              <!-- Channel 1: WhatsApp -->
+              <div style="display: flex; gap: 16px; align-items: flex-start; margin-bottom: 24px;">
+                <div style="width: 44px; height: 44px; border-radius: 50%; background-color: rgba(37, 211, 102, 0.15); color: #25D366; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong style="display: block; font-size: 0.95rem; color: var(--color-text-primary);">WhatsApp Chat</strong>
+                  <span style="display: block; font-size: 0.88rem; color: var(--color-text-secondary); margin-bottom: 6px;">
+                    Fastest response for order quotes & customization
+                  </span>
+                  <a href="https://wa.me/919876543210" target="_blank" rel="noopener" style="color: var(--color-terracotta); font-weight: 600; font-size: 0.9rem;">
+                    +91 98765 43210 &rarr;
+                  </a>
+                </div>
+              </div>
+
+              <!-- Channel 2: Email -->
+              <div style="display: flex; gap: 16px; align-items: flex-start; margin-bottom: 24px;">
+                <div style="width: 44px; height: 44px; border-radius: 50%; background-color: var(--color-terracotta-light); color: var(--color-terracotta); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <strong style="display: block; font-size: 0.95rem; color: var(--color-text-primary);">Email Inquiries</strong>
+                  <span style="display: block; font-size: 0.88rem; color: var(--color-text-secondary); margin-bottom: 6px;">
+                    For collaborations, bulk orders & press
+                  </span>
+                  <a href="mailto:hello@knotandnestbyjp.com" style="color: var(--color-terracotta); font-weight: 600; font-size: 0.9rem;">
+                    hello@knotandnestbyjp.com &rarr;
+                  </a>
+                </div>
+              </div>
+
+              <!-- Channel 3: Instagram -->
+              <div style="display: flex; gap: 16px; align-items: flex-start;">
+                <div style="width: 44px; height: 44px; border-radius: 50%; background-color: var(--color-sage-light); color: var(--color-sage-dark); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong style="display: block; font-size: 0.95rem; color: var(--color-text-primary);">Instagram Community</strong>
+                  <span style="display: block; font-size: 0.88rem; color: var(--color-text-secondary); margin-bottom: 6px;">
+                    Daily behind-the-scenes & new stitch reveals
+                  </span>
+                  <a href="https://instagram.com" target="_blank" rel="noopener" style="color: var(--color-terracotta); font-weight: 600; font-size: 0.9rem;">
+                    @knotandnest.byjp &rarr;
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Studio Location Badge -->
+            <div style="background-color: var(--color-bg-secondary); border-radius: var(--radius-md); padding: 24px; border: 1px solid var(--color-border);">
+              <h4 style="margin-bottom: 6px; font-size: 1.05rem;">📍 Artisan Studio</h4>
+              <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.5; margin: 0;">
+                Bengaluru &amp; Delhi NCR, India.<br>
+                Handcrafted locally • Delivered across all Indian states &amp; union territories.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Questions Accordion -->
+    <section class="section-padding" style="background-color: var(--color-bg-secondary); border-top: 1px solid var(--color-border);" aria-label="Frequently Asked Questions">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Common Questions</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Everything you need to know about crafting times, pan-India delivery, and custom crochet requests.</p>
+        </div>
+
+        <div class="faq-list">
+          
+          <div class="faq-item active">
+            <button class="faq-question" type="button">
+              <span>How long does it take to handcraft and dispatch my order?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                In-stock items are packaged and dispatched within 1–2 business days. Made-to-order and custom bespoke pieces generally take 3–7 crafting days depending on the size and stitch complexity. We share tracking updates directly via WhatsApp/SMS.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Do you accept custom color choices or specific dimensions?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, absolutely! Custom requests are a core part of Knot & Nest by JP. You can select your preferred shade combinations, request extended bag straps, or have custom-sized table runners crocheted to fit your dining table.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>How do I wash and maintain my handmade crochet pieces?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                We recommend gentle hand washing in cold/lukewarm water using a mild wool or liquid detergent. Never wring out or machine tumble dry. Gently reshape the item and lay it flat on a clean dry towel in the shade.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>What are your shipping charges across India?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                We offer <strong>Free Delivery across India</strong> on all orders of ₹1,500 and above. For orders under ₹1,500, a flat standard delivery charge of ₹99 applies.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Can I order bulk pieces for wedding favors or baby showers?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes! We love creating bespoke bulk gifts—including mini flower bouquets, personalized bookmark sets, and coaster favor bundles with custom gift tags. Please reach out at least 3–4 weeks prior to your event.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <div class="logo-main">Knot <span>&</span> Nest</div>
+          <div class="brand-logo" style="margin-bottom: 8px;">
+            <span class="logo-sub" style="color: #9C8C7E;">by JP • Premium Handmade</span>
+          </div>
+          <p class="footer-tagline">
+            Handmade crochet pieces, thoughtfully crafted with love in India. Embracing slow living and conscious craftsmanship.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+            <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="social-pill" aria-label="WhatsApp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Brand</a>
+            <a href="products.html">Product Collection</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="order.html">Place an Order</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Collections</h4>
+          <div class="footer-links">
+            <a href="products.html?category=bags">Crochet Bags</a>
+            <a href="products.html?category=home-decor">Home & Nests</a>
+            <a href="products.html?category=gifts">Floral & Gifts</a>
+            <a href="products.html?category=accessories">Wearable Accents</a>
+            <a href="order.html?custom=true">Bespoke Custom</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Handmade Promise</h4>
+          <p style="font-size: 0.9rem; color: #BDB0A3; line-height: 1.6; margin-bottom: 14px;">
+            Every single stitch is woven by artisan JP in India. We ship across India in eco-friendly, plastic-free packaging.
+          </p>
+          <a href="order.html" class="btn btn-primary btn-sm" style="width: 100%;">Order a Piece</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Knot & Nest by JP. All rights reserved.</div>
+        <div>Thoughtfully crafted in India • Authentic Handmade Brand</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

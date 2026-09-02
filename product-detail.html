@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | Knot & Nest by JP</title>
+  <meta name="description" content="Detailed craftsmanship, materials, dimensions, and care instructions for handmade crochet pieces by Knot & Nest by JP.">
+  <meta name="theme-color" content="#FAF7F2">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar" role="region" aria-label="Announcement">
+    <span>✨ Handcrafted with love in India • <strong>Free Pan-India Delivery</strong> on orders over ₹1,500 • Custom Orders Welcome</span>
+  </div>
+
+  <!-- Main Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="Knot and Nest by JP Home">
+        <span class="logo-main">Knot <span>&</span> Nest</span>
+        <span class="logo-sub">by JP • Handmade</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link active">Products</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="order.html" class="nav-link">Order</a>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="header-actions">
+        <a href="order.html" class="btn btn-primary btn-sm">Place Order</a>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div>
+      <div class="mobile-nav-header">
+        <div class="brand-logo">
+          <span class="logo-main" style="font-size: 1.4rem;">Knot <span>&</span> Nest</span>
+          <span class="logo-sub">by JP</span>
+        </div>
+        <button class="mobile-nav-close" aria-label="Close menu" style="font-size: 1.6rem; color: var(--color-text-primary);">&times;</button>
+      </div>
+
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link active">Products</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="order.html" class="nav-link">Order</a>
+      </nav>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <a href="products.html" class="btn btn-primary" style="width: 100%;">Explore Collection</a>
+      <a href="order.html?custom=true" class="btn btn-outline" style="width: 100%;">Order Custom Crochet</a>
+    </div>
+  </div>
+
+  <main>
+    <div class="container" style="padding-top: 30px; padding-bottom: 80px;">
+      
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" style="margin-bottom: 24px; font-size: 0.88rem; color: var(--color-text-muted);">
+        <a href="index.html" style="color: var(--color-text-secondary);">Home</a> &nbsp;/&nbsp;
+        <a href="products.html" style="color: var(--color-text-secondary);">Products</a> &nbsp;/&nbsp;
+        <span id="breadcrumbProductName" style="color: var(--color-text-primary); font-weight: 600;">Product Detail</span>
+      </nav>
+
+      <!-- Product Detail 2-Column Layout -->
+      <div class="product-detail-layout">
+        
+        <!-- Left: Image Gallery -->
+        <div class="product-gallery-sticky">
+          <div class="main-image-frame">
+            <img id="detailMainImage" src="" alt="Handmade crochet product photo">
+          </div>
+          <div class="thumbnail-strip" id="thumbnailStrip">
+            <!-- Populated via product-detail.js -->
+          </div>
+        </div>
+
+        <!-- Right: Information & Customization -->
+        <div class="product-info-column">
+          <span class="eyebrow" id="detailCategory" style="margin-bottom: 6px;">BAGS & TOTES</span>
+          <h1 id="detailTitle" style="font-size: clamp(2rem, 3.2vw, 2.8rem); margin-bottom: 8px;">Product Title</h1>
+          
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+            <div style="display: flex; gap: 2px; color: #F5A623; font-size: 0.95rem;">★★★★★</div>
+            <span style="font-size: 0.85rem; color: var(--color-text-muted);">Handcrafted Artisan Grade</span>
+            <span id="detailAvailability" class="product-tag-badge tag-instock">In Stock</span>
+          </div>
+
+          <div class="detail-price-row">
+            <span class="detail-price-main" id="detailPrice">₹0</span>
+            <span class="detail-price-old" id="detailOldPrice"></span>
+            <span style="font-size: 0.82rem; color: var(--color-sage-dark); font-weight: 600;">(Inclusive of taxes)</span>
+          </div>
+
+          <p id="detailDescription" style="font-size: 1.02rem; line-height: 1.7; margin-bottom: 28px; color: var(--color-text-secondary);">
+            Description loading...
+          </p>
+
+          <!-- Color Swatches -->
+          <div class="swatch-group">
+            <label class="swatch-label">
+              Select Color Palette: <strong id="selectedColourLabel" style="color: var(--color-terracotta);">Terracotta & Cream</strong>
+            </label>
+            <div class="swatch-options" id="swatchOptions">
+              <!-- Swatches populated dynamically -->
+            </div>
+          </div>
+
+          <!-- Quantity Stepper -->
+          <div style="margin-bottom: 30px;">
+            <label class="swatch-label" for="quantityInput">Quantity:</label>
+            <div class="quantity-stepper">
+              <button type="button" class="quantity-btn" id="qtyMinus" aria-label="Decrease quantity">&minus;</button>
+              <input type="number" id="quantityInput" class="quantity-input" value="1" min="1" max="10" aria-label="Quantity">
+              <button type="button" class="quantity-btn" id="qtyPlus" aria-label="Increase quantity">&plus;</button>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="detail-actions-row">
+            <button type="button" id="btnOrderPiece" class="btn btn-primary btn-lg" style="flex-grow: 1;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+              Order This Piece
+            </button>
+
+            <button type="button" id="btnWhatsappInquire" class="btn btn-whatsapp btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+              </svg>
+              Inquire on WhatsApp
+            </button>
+          </div>
+
+          <!-- Specifications Table -->
+          <div style="margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--color-border);">
+            <h3 style="font-size: 1.25rem; margin-bottom: 14px;">Handmade Specifications</h3>
+            <table class="spec-table">
+              <tbody>
+                <tr>
+                  <td>Materials & Fibers</td>
+                  <td id="specMaterials">100% Organic Combed Cotton</td>
+                </tr>
+                <tr>
+                  <td>Measurements</td>
+                  <td id="specDimensions">38cm x 35cm</td>
+                </tr>
+                <tr>
+                  <td>Artisan Craft Time</td>
+                  <td id="specCraftTime">14 hours of hand-crochet</td>
+                </tr>
+                <tr>
+                  <td>Origin</td>
+                  <td>Handcrafted with love in India by JP</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Care Instructions -->
+          <div style="margin-top: 28px; background-color: var(--color-surface); padding: 22px; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+            <h4 style="margin-bottom: 8px; color: var(--color-terracotta); display: flex; align-items: center; gap: 8px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+              Care & Longevity Instructions
+            </h4>
+            <p id="careInstructionsText" style="font-size: 0.92rem; color: var(--color-text-secondary); line-height: 1.6;">
+              Gently spot clean or hand wash in cold water using mild detergent. Lay flat to dry on a clean towel.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Related Pieces -->
+      <div style="margin-top: 80px; padding-top: 60px; border-top: 1px solid var(--color-border);">
+        <div class="section-header">
+          <span class="eyebrow">Complementary Handcrafts</span>
+          <h2>You May Also Adore</h2>
+        </div>
+        <div class="product-grid" id="relatedProductsGrid">
+          <!-- Populated by product-detail.js -->
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <div class="logo-main">Knot <span>&</span> Nest</div>
+          <div class="brand-logo" style="margin-bottom: 8px;">
+            <span class="logo-sub" style="color: #9C8C7E;">by JP • Premium Handmade</span>
+          </div>
+          <p class="footer-tagline">
+            Handmade crochet pieces, thoughtfully crafted with love in India. Embracing slow living and conscious craftsmanship.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+            <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="social-pill" aria-label="WhatsApp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Brand</a>
+            <a href="products.html">Product Collection</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="order.html">Place an Order</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Collections</h4>
+          <div class="footer-links">
+            <a href="products.html?category=bags">Crochet Bags</a>
+            <a href="products.html?category=home-decor">Home & Nests</a>
+            <a href="products.html?category=gifts">Floral & Gifts</a>
+            <a href="products.html?category=accessories">Wearable Accents</a>
+            <a href="order.html?custom=true">Bespoke Custom</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Handmade Promise</h4>
+          <p style="font-size: 0.9rem; color: #BDB0A3; line-height: 1.6; margin-bottom: 14px;">
+            Every single stitch is woven by artisan JP in India. We ship across India in eco-friendly, plastic-free packaging.
+          </p>
+          <a href="order.html" class="btn btn-primary btn-sm" style="width: 100%;">Order a Piece</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Knot & Nest by JP. All rights reserved.</div>
+        <div>Thoughtfully crafted in India • Authentic Handmade Brand</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product-detail.js"></script>
+</body>
+</html>
