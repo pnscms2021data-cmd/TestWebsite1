@@ -1,0 +1,679 @@
+/* ==========================================================================
+   Knot & Nest by JP - Core Stylesheet & Botanical Design System
+   Theme: Fresh Eucalyptus Sage & Pearl Cream
+   (Botanical Muted Green, Morning Mist, and Warm Beige Accents)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Google Fonts Import
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* --------------------------------------------------------------------------
+   CSS Variables & Design Tokens
+   -------------------------------------------------------------------------- */
+:root {
+  /* Fresh Eucalyptus Sage & Pearl Cream Palette */
+  --color-bg-primary: #F8FAF8;      /* Luminous pearl cream / soft morning mist white */
+  --color-bg-secondary: #EEF4EE;    /* Gentle eucalyptus mist / botanical linen */
+  --color-bg-tertiary: #E2EBE2;     /* Deeper soft sage beige */
+  --color-card-bg: #FFFFFF;         /* Crisp botanical card background */
+  --color-surface: #FBFDFB;         /* Subtle elevated surface */
+
+  --color-text-primary: #1B261E;    /* Deep Pine-Espresso Noir (crystal clear & rich) */
+  --color-text-secondary: #4D5E51;  /* Soft Botanical Slate */
+  --color-text-muted: #7E9082;      /* Gentle Eucalyptus Mist */
+  --color-text-light: #F8FAF8;      /* Light cream text */
+
+  /* Signature Accents */
+  --color-terracotta: #4E6E58;      /* Rich Eucalyptus Sage */
+  --color-terracotta-dark: #3A5443; /* Deep Pine Sage for hover */
+  --color-terracotta-light: #E5EFE6;/* Delicate Morning Eucalyptus wash */
+
+  --color-ochre: #B88B58;           /* Warm Sand Dune / Golden Wheat */
+  --color-ochre-light: #F7F0E6;     /* Pale Warm Dune Silk */
+
+  --color-sage: #688A72;            /* Lush Herbaceous Sage */
+  --color-sage-dark: #3E5646;       /* Deep Woodland Green */
+  --color-sage-light: #EEF5EF;      /* Gentle Laurel tint */
+
+  --color-border: #DDE7DF;          /* Soft Herbal Sand outline */
+  --color-border-hover: #C2D4C5;    /* Elevated Sage Border */
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Garamond, Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shadows - Ambient Botanical Glow */
+  --shadow-sm: 0 2px 10px rgba(27, 38, 30, 0.03);
+  --shadow-md: 0 10px 30px rgba(27, 38, 30, 0.05), 0 1px 3px rgba(27, 38, 30, 0.02);
+  --shadow-lg: 0 20px 48px rgba(27, 38, 30, 0.08), 0 4px 12px rgba(27, 38, 30, 0.03);
+  --shadow-hover: 0 24px 54px rgba(78, 110, 88, 0.16), 0 6px 16px rgba(27, 38, 30, 0.04);
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-full: 9999px;
+
+  /* Spacing & Layout */
+  --container-max: 1240px;
+  --header-height: 84px;
+  --announcement-height: 40px;
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-slow: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --------------------------------------------------------------------------
+   CSS Reset & Base
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.7;
+  font-weight: 400;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, svg, picture, video {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* --------------------------------------------------------------------------
+   Typography Styles
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5.2vw, 4.2rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(2rem, 3.8vw, 3.1rem);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: clamp(1.4rem, 2.3vw, 1.9rem);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+p {
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.text-lead {
+  font-size: clamp(1.1rem, 1.45vw, 1.25rem);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-terracotta);
+  margin-bottom: 14px;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1.5px;
+  background: linear-gradient(90deg, var(--color-terracotta) 0%, transparent 100%);
+}
+
+.eyebrow::before {
+  background: linear-gradient(270deg, var(--color-terracotta) 0%, transparent 100%);
+}
+
+.eyebrow.no-line::before,
+.eyebrow.no-line::after {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Layout Containers
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.container-narrow {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section-padding {
+  padding-top: clamp(65px, 8.5vw, 110px);
+  padding-bottom: clamp(65px, 8.5vw, 110px);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto clamp(40px, 5vw, 64px);
+}
+
+.section-header h2 {
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  color: var(--color-text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   Buttons & Links
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 30px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #4E6E58 0%, #3A5443 100%);
+  color: #FFFFFF;
+  border: 1px solid #3A5443;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #3E5B47 0%, #2E4335 100%);
+  border-color: #2E4335;
+  box-shadow: 0 10px 26px rgba(78, 110, 88, 0.38);
+  transform: translateY(-2px);
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border: 1.5px solid var(--color-text-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-text-primary);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: #FFFFFF;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta);
+  background-color: var(--color-terracotta-light);
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #1EBE5D 100%);
+  color: #FFFFFF;
+  border: 1px solid #1EBE5D;
+}
+
+.btn-whatsapp:hover {
+  background: linear-gradient(135deg, #1EBE5D 0%, #17A950 100%);
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.35);
+  transform: translateY(-2px);
+  color: #FFFFFF;
+}
+
+.btn-sm {
+  padding: 9px 20px;
+  font-size: 0.86rem;
+}
+
+.btn-lg {
+  padding: 16px 36px;
+  font-size: 1.05rem;
+}
+
+.btn-icon {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   Announcement Bar
+   -------------------------------------------------------------------------- */
+.announcement-bar {
+  background: linear-gradient(90deg, #151F18 0%, #203025 50%, #151F18 100%);
+  color: #F8FAF8;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 9px 16px;
+  text-align: center;
+  position: relative;
+  z-index: 101;
+}
+
+.announcement-bar strong {
+  color: var(--color-ochre);
+}
+
+/* --------------------------------------------------------------------------
+   Header & Navigation
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(248, 250, 248, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(221, 231, 223, 0.85);
+  z-index: 100;
+  transition: all var(--transition-base);
+}
+
+.site-header.scrolled {
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 24px rgba(27, 38, 30, 0.06);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+}
+
+/* Brand Logo */
+.brand-logo {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.brand-logo .logo-main {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.brand-logo .logo-main span {
+  color: var(--color-terracotta);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.brand-logo .logo-sub {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* Navigation Links */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  position: relative;
+  padding: 8px 0;
+  transition: color var(--transition-fast);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--color-terracotta);
+  transition: width var(--transition-base);
+  border-radius: var(--radius-full);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-text-primary);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  font-weight: 600;
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 8px;
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Drawer Navigation
+   -------------------------------------------------------------------------- */
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(27, 38, 30, 0.45);
+  backdrop-filter: blur(6px);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+}
+
+.mobile-nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 310px;
+  height: 100vh;
+  background-color: var(--color-bg-primary);
+  z-index: 999;
+  padding: 36px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: -10px 0 35px rgba(0, 0, 0, 0.12);
+  transition: right var(--transition-base);
+}
+
+.mobile-nav-drawer.active {
+  right: 0;
+}
+
+.mobile-nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.mobile-nav-links .nav-link {
+  font-size: 1.2rem;
+  padding: 6px 0;
+  display: block;
+}
+
+.mobile-nav-footer {
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background: linear-gradient(180deg, #151F18 0%, #0E1611 100%);
+  color: #E3EDE5;
+  padding-top: clamp(65px, 8.5vw, 95px);
+  padding-bottom: 36px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: clamp(32px, 5vw, 64px);
+  margin-bottom: 60px;
+}
+
+.footer-brand .logo-main {
+  font-family: var(--font-serif);
+  font-size: 1.95rem;
+  font-weight: 700;
+  color: #F8FAF8;
+  margin-bottom: 6px;
+}
+
+.footer-brand .logo-main span {
+  color: var(--color-ochre);
+  font-style: italic;
+}
+
+.footer-tagline {
+  font-size: 0.95rem;
+  color: #A9BDB0;
+  margin: 14px 0 24px;
+  max-width: 330px;
+  line-height: 1.65;
+}
+
+.footer-title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: #F8FAF8;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: #A9BDB0;
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--color-ochre);
+  padding-left: 6px;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-full);
+  color: #F8FAF8;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.social-pill:hover {
+  background-color: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(78, 110, 88, 0.35);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.85rem;
+  color: #7E9082;
+}
+
+.footer-bottom a {
+  color: #7E9082;
+}
+
+.footer-bottom a:hover {
+  color: #F8FAF8;
+}
+
+/* --------------------------------------------------------------------------
+   Trust Badge Strip
+   -------------------------------------------------------------------------- */
+.trust-banner {
+  background-color: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 16px 0;
+}
+
+.trust-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  text-align: center;
+}
+
+.trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.03em;
+}
+
+.trust-dot {
+  width: 5px;
+  height: 5px;
+  background-color: var(--color-terracotta);
+  border-radius: 50%;
+}
